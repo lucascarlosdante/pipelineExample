@@ -19,6 +19,8 @@ jobs:
         run: npm run build
         env:
           VITE_ENV: dev
+          VITE_BASE: /dev/
+          VITE_BASE: /dev/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
