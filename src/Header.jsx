@@ -1,6 +1,8 @@
 
 import React, { useEffect } from 'react';
-import './App.css';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import { ENV, ENV_COLORS } from './env';
 
 function Header() {
@@ -8,9 +10,13 @@ function Header() {
     document.title = `Ambiente: ${ENV.toUpperCase()}`;
   }, []);
   return (
-    <header style={{ background: ENV_COLORS[ENV], color: '#fff', padding: '1rem', textAlign: 'center' }}>
-      Ambiente: <b>{ENV.toUpperCase()}</b>
-    </header>
+    <AppBar position="static" sx={{ background: ENV_COLORS[ENV] }}>
+      <Toolbar sx={{ justifyContent: 'center' }}>
+        <Typography variant="h6" component="div" sx={{ fontWeight: 600 }}>
+          Ambiente: <b>{ENV.toUpperCase()}</b>
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 }
 
