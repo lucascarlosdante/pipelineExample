@@ -8,4 +8,8 @@ export default defineConfig({
   define: {
     'import.meta.env.VITE_ENV': JSON.stringify(process.env.VITE_ENV || 'dev'),
   },
+  server: {
+    host: "127.0.0.1",
+    port: 5173,
+  }
 });
