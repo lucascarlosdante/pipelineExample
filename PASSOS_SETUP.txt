@@ -1,0 +1,59 @@
+# Passos para rodar o projeto em outra máquina
+
+1. Clone o repositório:
+
+```
+git clone <URL_DO_REPOSITORIO>
+cd pipelineExample
+```
+
+2. Instale as dependências:
+
+```
+npm install
+```
+
+3. (Opcional) Instale o Cypress localmente (caso queira rodar testes E2E):
+
+```
+npm install -D cypress
+```
+
+4. Para rodar o frontend e a API mock juntos (em desenvolvimento):
+
+```
+npm run dev:all
+```
+
+Ou, em dois terminais separados:
+
+```
+npm run dev
+npm run mock-api
+```
+
+5. Para rodar os testes E2E:
+
+```
+npx cypress run
+```
+
+Ou para abrir a interface do Cypress:
+
+```
+npx cypress open
+```
+
+6. Para buildar o projeto para produção:
+
+```
+npm run build
+```
+
+7. Para fazer deploy (se aplicável):
+
+```
+npm run deploy
+```
+
+Pronto! Com esses comandos, o ambiente estará configurado e funcional.
