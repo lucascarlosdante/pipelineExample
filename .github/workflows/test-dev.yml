@@ -19,7 +19,7 @@ jobs:
         run: npm run dev &
       - name: Start mock API
         run: npm run mock-api &
-      - name: Wait for servers
-        run: npx wait-on http://localhost:5173 http://localhost:3001/api/echo
+      # - name: Wait for servers
+      #   run: npx wait-on http://localhost:5173 http://localhost:3001/api/echo
       - name: Run Cypress CRUD tests
         run: npx cypress run --spec "cypress/e2e/crud.cy.js"
