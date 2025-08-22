@@ -7,22 +7,12 @@
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm ci
-      - name: Start mock API
-        run: npm run mock-api &
-      - name: Wait for mock API
-        run: npx wait-on http://localhost:3001/api/echo
-      - name: Run Cypress API login tests
-        run: npx cypress run --spec "cypress/e2e/api-login.cy.js"
-name: Testes e2e na dev
+      name: Testes e2e na dev
 
-on:
-  pull_request:
-    branches: [tst]
+      on:
+        pull_request:
+          branches: [tst]
 
-jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js
