@@ -1,8 +1,6 @@
 name: Testes e2e na dev
 
 on:
-  push:
-    branches: [tst]
   pull_request:
     branches: [tst]
 
