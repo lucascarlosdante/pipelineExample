@@ -3,12 +3,6 @@ describe('CRUD Demo', () => {
     cy.visit('/');
   });
 
-//   it('consegue acessar a aplicação?', () => {
-//     cy.request('http://localhost:5173').then((resp) => {
-//     expect(resp.status).to.eq(200)
-//   })
-//   })
-
   it('deve exibir o header com ambiente', () => {
     cy.contains('Ambiente:').should('exist');
   });
