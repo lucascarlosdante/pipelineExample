@@ -22,4 +22,5 @@ describe('CRUD Demo', () => {
   it('deve remover um item', () => {
     cy.get('[data-testid^="remove-btn-"]').first().click();
   });
-});
+}); 
+// Comentário
