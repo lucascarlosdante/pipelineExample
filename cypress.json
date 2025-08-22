@@ -1,0 +1,7 @@
+{
+  "baseUrl": "./",
+  "env": {
+    "VITE_ENV": "dev"
+  },
+  "testFiles": "**/*.cy.{js,jsx,ts,tsx}"
+}
