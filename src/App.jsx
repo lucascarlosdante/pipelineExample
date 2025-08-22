@@ -1,19 +1,33 @@
+
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 import Header from './Header';
 import CrudDemo from './CrudDemo';
+import Login from './Login';
+import { Box, Button } from '@mui/material';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [logged, setLogged] = useState(false);
+
+  const handleLogout = () => setLogged(false);
 
   return (
     <>
       <Header />
-  <CrudDemo />
+      {!logged ? (
+        <Login onLogin={() => setLogged(true)} />
+      ) : (
+        <Box>
+          <Box display="flex" justifyContent="flex-end" p={2}>
+            <Button variant="outlined" color="secondary" onClick={handleLogout} data-testid="logout-btn">
+              Sair
+            </Button>
+          </Box>
+          <CrudDemo />
+        </Box>
+      )}
     </>
   );
 }
 
-export default App
+export default App;
