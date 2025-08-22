@@ -20,7 +20,6 @@ jobs:
         env:
           VITE_ENV: hml
           VITE_BASE: /hml/
-          VITE_BASE: /hml/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
