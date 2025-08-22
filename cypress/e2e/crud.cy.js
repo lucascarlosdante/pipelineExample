@@ -24,7 +24,7 @@ if (SLOW_MODE) {
 describe('Login e CRUD Demo', () => {
   beforeEach(() => {
     cy.visit('/');
-    // Realiza login antes de cada teste do CRUD
+    // Realiza login antes de cada teste do CRUD/
     cy.get('[data-testid="login-user"]').type('admin');
     cy.get('[data-testid="login-pass"]').type('1234');
     cy.get('[data-testid="login-btn"]').click();
