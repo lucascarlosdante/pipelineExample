@@ -3,13 +3,19 @@ describe('CRUD Demo', () => {
     cy.visit('/');
   });
 
+//   it('consegue acessar a aplicação?', () => {
+//     cy.request('http://localhost:5173').then((resp) => {
+//     expect(resp.status).to.eq(200)
+//   })
+//   })
+
   it('deve exibir o header com ambiente', () => {
     cy.contains('Ambiente:').should('exist');
   });
 
   it('deve abrir o modal e adicionar um item', () => {
     cy.get('[data-testid="add-btn"]').click();
-    cy.get('[data-testid="input-title"]').type('Novo Item Teste');
+    cy.get('[data-testid="input-title"]').type('Novo Item Testes');
     cy.get('[data-testid="save-btn"]').click();
     cy.contains('Novo Item Teste').should('exist');
   });
